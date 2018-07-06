@@ -19,5 +19,11 @@ $data = [
 $url = "https://api.weibo.com/oauth2/access_token";
 // $url = "https://api.weibo.com/oauth2/access_token?client_id={$client_id}&client_secret={$client_secret}&grant_type={$grant_type}&code={$code}&redirect_uri={$redirect_uri}";
 // echo "<pre>";
-print_r(json_decode(getPost($url,$data),true));
+// print_r(json_decode(getPost($url,$data),true));
 // print_r(curlRequest($url));
+$res = json_decode(getPost($url,$data),true);
+$access_token = $res['access_token'];
+
+$url = "https://api.weibo.com/2/statuses/mentions.json?access_token={$access_token}";
+
+print_r(curlRequest($url));

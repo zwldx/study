@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+    <script>
+        function check(){
+            // var str = document.getElementById('str').value;
+            // var patt = /\d{2}/;
+            // alert(str.match(patt));
+
+
+            $.get('regex.php',{'str':$('#str').val()},function(data){
+                alert(data);
+                if(data==0){
+                    alert('false');
+                }else{
+                    alert('true');
+                }
+            });
+        }
+    
+
+       
+    </script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" name="" id="str">
+    <input type="button" value="检验" onclick='check();'>
+</body>
+</html>
+
