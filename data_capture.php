@@ -111,8 +111,9 @@ $str = file_get_contents($url);
 
 
 
-//下面这个网上说可以，我试了，不知道为什么不可以
-// $.getJSON("http://bendi.news.163.com/beijing/special/04388GGG/bjxinxiliu.js?callback=data_callback&_=1530860994846",{}, function(data) {
+//下面这个网上说可以，我试了,能返回jsonp数据，但是提示"Failed to execute 'write' on 'Document': It isn't possible to write into a document from an asynchronously-loaded external script unless it is explicitly opened."
+//不知道为什么不可以。注意这里要写成问号，写函数名不行，不知道为什么，要写成这种形式 callback=?
+// $.getJSON("http://bendi.news.163.com/beijing/special/04388GGG/bjxinxiliu.js?callback=?", function(data) {
 //     alert(data);
 
 // });
