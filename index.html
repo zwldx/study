@@ -1,0 +1,539 @@
+
+<script>if((/_touchall=1/.test(location.search)||!/auto|house|home|bbs|blog/.test(location.host))&&!/\/dy.163.com\/v2/.test(location.href)&&!(document.documentElement&&document.documentElement.getAttribute("phone"))&&/163\.com/.test(location.host)&&!/_pc=1/.test(location.search)&&/android.*?mobile|ipod|blackberry|bb\d+|phone/i.test(navigator.userAgent))document.write('<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><div style="position:fixed;width:100%;height:100%;background:#fff"><div style="position:absolute;top:50%;left:0;width:100%;height:40px;margin-top:-40px;text-align:center;background:url(http://img1.cache.netease.com/utf8/endpage/image/loading.gif) no-repeat top center;padding-top:40px;color:#666">页面加载中 ...</div></div><script src="http://static.ws.126.net/f2e/system/touchall/collect/foot~M2Tn9VR49xqt.js"'+' defer><'+'/script><plaintext style="display:none">');</script>
+    <link href="http://static.ws.126.net/f2e/house/common/css/house.AsTzRAWl12kl.30.css" rel="stylesheet" type="text/css" />
+    <script src="http://img1.cache.netease.com/cnews/js/ntes_jslib_1.x.js" type="text/javascript" charset="gb2312"></script>
+    <script src="http://img1.cache.netease.com/f2e/lib/js/ne.js"></script><link rel="stylesheet" type="text/css" href="http://img2.cache.netease.com/f2e/house/wb_specials/css/shares.pop4x1.1178317.css"/>
+    <link rel="stylesheet" type="text/css" href="http://img2.cache.netease.com/f2e/house/wb_specials/css/datalist2016.1187940.css"/>
+    <link rel="stylesheet" type="text/css" href="http://img2.cache.netease.com/f2e/house/wb_specials/css/index2016.1236792.css"/><script type="text/javascript">
+    var ifNeedTwoSize = 1;//是否需要两个尺寸，1是需要2个尺寸，2是只需要1200px的，3是只需要960px的 
+    </script>
+<script id="view_template" type="text/html">
+    <% if(imgurl && add1 && add2 && /\.jpg$|\.png$|\.jpeg$|\.gif$/.test(imgurl) && /\.jpg$|\.png$|\.jpeg$|\.gif$/.test(add1) && /\.jpg$|\.png$|\.jpeg$|\.gif$/.test(add2)){%>
+    <div class="data_row news_photoview clearfix ">
+      <div class="news_title">
+        <h3>
+          <a href="<%=docurl%>"  target="_blank"><%=title%></a></h3>
+      </div>
+      <div class="np_pic">
+        <a href="<%=docurl%>"  target="_blank">
+          
+          <span class="p_img3">
+            <img src="<%=imgurl%>"  onerror="javascript:this.src='http://img2.cache.netease.com/f2e/news/index2016/images/pic3_error.jpg';" height="120" width="190">
+          </span>
+          
+        </a>
+        <a href="<%=docurl%>"  target="_blank">
+          
+          <span class="p_img3">
+            <img src="<%=add1%>" onerror="javascript:this.src='http://img2.cache.netease.com/f2e/news/index2016/images/pic3_error.jpg';" height="120" width="190">
+          </span>
+          
+          
+        </a>
+        <a href="<%=docurl%>"  target="_blank" style="margin-right:0px;">
+          
+        
+          <span class="p_img3">
+            <img src="<%=add2%>" onerror="javascript:this.src='http://img2.cache.netease.com/f2e/news/index2016/images/pic3_error.jpg';" height="120" width="190">
+          </span>
+          
+        </a>
+      </div>
+      <div class="np_detail clearfix">
+        <div class="news_tag">
+          <%if(tlink!==""){%>
+          <strong class="barlink">
+            <a href="<%=tlink%>" class="link link_more"  target="_blank">
+              <em><%=label%></em></a>
+          </strong>
+          <%}%>
+          <div class="keywords">
+            <%for(var key=0; key<keywords.length; key++) {%>
+            <a href="<%=keywords[key].akey_link%>"  target="_blank"><%=keywords[key].keyname%></a>
+            <%}%>
+          </div>
+          <span class="time"><%=formatTime(time)%></span></div>
+        <div class="share-join clearfix">
+           <% if(commenturl!==""){%>
+            <a class="post_recommend_tie right" href="<%=commenturl%>"  target="_blank">
+              <div class="post_recommend_tie_wrap">
+                <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                <span class="post_recommend_tie_text">
+                  <i>跟贴</i><%=tienum ? tienum : 0%></span>
+              </div>
+            </a>
+          <%}else{%>
+            <a class="post_recommend_tie right" href="#"  target="_blank">
+              <div class="post_recommend_tie_wrap">
+                <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                <span class="post_recommend_tie_text">
+                  <i>跟贴</i><%=tienum ? tienum : 0%></span>
+              </div>
+            </a>
+          <%}%>
+          
+          <div class="ne-shares-parent right">
+            <span href="#share" title="分享" class="ne-shares-arr"></span>
+            <div class="share-join-item" ne-state="<%=docurl%>" ne-props="skin:pop4x1">
+            <div class="ne-shares-pop6x1wrap" ne-role="share-wrap" style="visibility: hidden;">
+                <ul class="ne-shares-pop6x1" data-url="<%=docurl%>"  data-title="<%=title%>" data-pic="<%=imgurl%>"  data-digest="<%=digest%>" data-source="网易房产">
+                    <li  class="nt-share-item" data-type="yixin">
+                      <a href="javascript:">
+                        <span class="inner">
+                          <i class="ep-share-icon ep-share-yixin"></i>
+                          <span class="ep-share-name">易信</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nt-wx2dcode-icon">
+                      <a href="javascript:" target="_self" class="ne-shares-weixin"  id="weixin-share">
+                        <span class="inner">
+                          <i class="ep-share-icon ep-share-weixin"></i>
+                          <span class="ep-share-name">微信</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nt-share-item" data-type="sinawb">
+                      <a href="javascript:">
+                        <span class="inner">
+                          <i class="ep-share-icon ep-share-sina"></i>
+                          <span class="ep-share-name">微博</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li class=" last nt-share-item" data-type="qzone">
+                      <a href="javascript:">
+                        <span class="inner">
+                          <i class="ep-share-icon ep-share-qzone"></i>
+                          <span class="ep-share-name">QQ空间</span>
+                        </span>
+                      </a>
+                    </li>
+                </ul>
+                </div>
+                <div class="ne-shares-qrwrap">
+                  <div class="ne-shares-qrarr"></div>
+                  <div ne-role="qrcode" class="ne-shares-qrcode">
+                   <div class="qrcode" title="<%=docurl%>"><img alt="Scan me!" style="display: block;" src=""  width="110" height="110"></div>
+                  </div>
+                  <p>用微信扫码二维码</p><p>分享至好友和朋友圈</p>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <%}
+     else if(pics3 && pics3.length >= 3){%>
+    <div class="data_row news_photoview clearfix ">
+      <div class="news_title">
+        <h3>
+          <a href="<%=docurl%>" target="_blank"><%=title%></a></h3>
+      </div>
+      <div class="np_pic">
+        <%for(var threePic=0; threePic<3; threePic++) {%>
+          <% if(threePic!==2){ %>
+            <a href="<%=docurl%>"  target="_blank">
+              <span class="p_img3">
+                <img src="<%=pics3[threePic].pic%>"  onerror="javascript:this.src='http://img2.cache.netease.com/f2e/news/index2016/images/pic3_error.jpg';"  height="120" width="190">
+              </span>
+            </a>
+          <%}else{%>
+            <a href="<%=docurl%>"  target="_blank" style="margin-right:0;">
+              <span class="p_img3">
+                <img src="<%=pics3[threePic].pic%>"  onerror="javascript:this.src='http://img2.cache.netease.com/f2e/news/index2016/images/pic3_error.jpg';"  height="120" width="190">
+              </span>
+            </a>
+          <%}%>
+        
+        <%}%>
+      </div>
+      <div class="np_detail clearfix">
+        <div class="news_tag">
+          <%if(tlink!==""){%>
+          <strong class="barlink">
+            <a href="<%=tlink%>" class="link link_more"  target="_blank">
+              <em><%=label%></em></a>
+          </strong>
+          <%}%>
+          <div class="keywords">
+            <%for(var key=0; key<keywords.length; key++) {%>
+            <a href="<%=keywords[key].akey_link%>"  target="_blank"><%=keywords[key].keyname%></a>
+            <%}%>
+          </div>
+          <span class="time"><%=formatTime(time)%></span></div>
+        <div class="share-join clearfix">
+           <% if(commenturl!==""){%>
+            <a class="post_recommend_tie right" href="<%=commenturl%>"  target="_blank">
+              <div class="post_recommend_tie_wrap">
+                <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                <span class="post_recommend_tie_text">
+                  <i>跟贴</i><%=tienum ? tienum : 0%></span>
+              </div>
+            </a>
+          <%}else{%>
+            <a class="post_recommend_tie right" href="#"  target="_blank">
+              <div class="post_recommend_tie_wrap">
+                <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                <span class="post_recommend_tie_text">
+                  <i>跟贴</i><%=tienum ? tienum : 0%></span>
+              </div>
+            </a>
+          <%}%>
+          <div class="ne-shares-parent right">
+            <span href="#share" title="分享" class="ne-shares-arr"></span>
+            <div class="share-join-item" ne-state="<%=docurl%>" ne-props="skin:pop4x1">
+            <div class="ne-shares-pop6x1wrap" ne-role="share-wrap" style="visibility: hidden;">
+                <ul class="ne-shares-pop6x1" data-url="<%=docurl%>"  data-title="<%=title%>" data-pic="<%=imgurl%>"  data-digest="<%=digest%>" data-source="网易房产">
+                  <li  class="nt-share-item" data-type="yixin">
+                    <a href="javascript:">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-yixin"></i>
+                        <span class="ep-share-name">易信</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nt-wx2dcode-icon">
+                    <a href="javascript:" target="_self" class="ne-shares-weixin"  id="weixin-share">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-weixin"></i>
+                        <span class="ep-share-name">微信</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nt-share-item" data-type="sinawb">
+                    <a href="javascript:">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-sina"></i>
+                        <span class="ep-share-name">微博</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class=" last nt-share-item" data-type="qzone">
+                    <a href="javascript:">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-qzone"></i>
+                        <span class="ep-share-name">QQ空间</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                </div>
+                <div class="ne-shares-qrwrap">
+                  <div class="ne-shares-qrarr"></div>
+                  <div ne-role="qrcode" class="ne-shares-qrcode">
+                   <div class="qrcode" title="<%=docurl%>"><img alt="Scan me!" style="display: block;" src=""  width="110" height="110"></div>
+                  </div>
+                  <p>用微信扫码二维码</p><p>分享至好友和朋友圈</p>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+                      
+    <%} else if(add1 && /\.jpg$|\.png$|\.jpeg$|\.gif$/.test(add1)){%>
+    <div class="data_row news_special clearfix ">
+      <div class="news_title">
+        <h3>
+          <a href="<%=docurl%>"  target="_blank"><%=title%></a></h3>
+          <%if(tlink!==""){%>
+        <a href="<%=tlink%>" class="link link_more">
+          <em><%=label%></em></a>
+          <%}%>
+      </div>
+      <a href="<%=docurl%>" class="ns_pic"  target="_blank">
+        <img src="<%=add1%>" alt="<%=title%>" onerror="javascript:this.src='http://img2.cache.netease.com/f2e/news/index2016/images/special_error.jpg';" height="300" width="600"></a>
+    </div>
+    <%}
+     else if(imgurl && imgurl!==""){%>
+    <div class="data_row news_article clearfix news_first">
+        <a href="<%=docurl%>" class="na_pic"  target="_blank">
+            <img src="<%=imgurl%>" alt="<%=title%>" onerror="imgError(this)" height="88" width="140" />
+        </a>
+        <div class="na_detail clearfix">
+            <div class="news_title">
+                <h3>
+                    <a href="<%=docurl%>"  target="_blank"><%=title%></a></h3>
+            </div>
+            <div class="news_tag">
+                <%if(tlink!==""){%>
+                <strong class="barlink">
+                    <a href="<%=tlink%>" class="link link_more"  target="_blank">
+                        <em><%=label%></em></a>
+                </strong>
+                <%}%>
+                <%if(keywords && keywords.length > 0){%>
+                <div class="keywords">
+                    <%for(var key=0; key<keywords.length; key++) {%>
+                    <a href="<%=keywords[key].akey_link%>"  target="_blank"><%=keywords[key].keyname%></a>
+                    <%}%>
+                </div>
+                <%}%>
+                <span class="time"><%=formatTime(time)%></span></div>
+            <div class="share-join clearfix">
+                 <% if(commenturl!==""){%>
+                  <a class="post_recommend_tie right" href="<%=commenturl%>"  target="_blank">
+                    <div class="post_recommend_tie_wrap">
+                      <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                      <span class="post_recommend_tie_text">
+                        <i>跟贴</i><%=tienum ? tienum : 0%></span>
+                    </div>
+                  </a>
+                <%}else{%>
+                  <a class="post_recommend_tie right" href="#"  target="_blank">
+                    <div class="post_recommend_tie_wrap">
+                      <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                      <span class="post_recommend_tie_text">
+                        <i>跟贴</i><%=tienum ? tienum : 0%></span>
+                    </div>
+                  </a>
+                <%}%>
+                <div class="ne-shares-parent right">
+                    <span href="#share" title="分享" class="ne-shares-arr"></span>
+                    <div class="share-join-item" ne-state="<%=docurl%>" ne-props="skin:pop4x1">
+                    <div class="ne-shares-pop6x1wrap" ne-role="share-wrap" style="visibility: hidden;">
+                      <ul class="ne-shares-pop6x1" data-url="<%=docurl%>"  data-title="<%=title%>" data-pic="<%=imgurl%>"  data-digest="<%=digest%>" data-source="网易房产">
+                        <li  class="nt-share-item" data-type="yixin">
+                          <a href="javascript:">
+                            <span class="inner">
+                              <i class="ep-share-icon ep-share-yixin"></i>
+                              <span class="ep-share-name">易信</span>
+                            </span>
+                          </a>
+                        </li>
+                        <li class="nt-wx2dcode-icon">
+                          <a href="javascript:" target="_self" class="ne-shares-weixin"  id="weixin-share">
+                            <span class="inner">
+                              <i class="ep-share-icon ep-share-weixin"></i>
+                              <span class="ep-share-name">微信</span>
+                            </span>
+                          </a>
+                        </li>
+                        <li class="nt-share-item" data-type="sinawb">
+                          <a href="javascript:">
+                            <span class="inner">
+                              <i class="ep-share-icon ep-share-sina"></i>
+                              <span class="ep-share-name">微博</span>
+                            </span>
+                          </a>
+                        </li>
+                        <li class=" last nt-share-item" data-type="qzone">
+                          <a  href="javascript:">
+                            <span class="inner">
+                              <i class="ep-share-icon ep-share-qzone"></i>
+                              <span class="ep-share-name">QQ空间</span>
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="ne-shares-qrwrap">
+                      <div class="ne-shares-qrarr"></div>
+                      <div ne-role="qrcode" class="ne-shares-qrcode">
+                       <div class="qrcode" title="<%=docurl%>"><img alt="Scan me!" style="display: block;" src=""  width="110" height="110"></div>
+                      </div>
+                      <p>用微信扫码二维码</p><p>分享至好友和朋友圈</p>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <%}
+     else{%>
+    <div class="data_row news_article clearfix news_first">
+      <div class="na_detail clearfix no_pic">
+        <div class="news_title"> 
+         <h3><a href="<%=docurl%>"  target="_blank"><%=title%></a></h3> 
+        </div> 
+        <div class="news_tag"> 
+         <%if(keywords && keywords.length > 0){%>
+          <div class="keywords">
+            <%for(var key=0; key<keywords.length; key++) {%>
+            <a href="<%=keywords[key].akey_link%>" target="_blank"><%=keywords[key].keyname%></a>
+            <%}%>
+          </div>
+          <%}%>
+         <span class="time"><%=formatTime(time)%></span>
+        </div> 
+        <div class="share-join clearfix"> 
+           <% if(commenturl!==""){%>
+            <a class="post_recommend_tie right" href="<%=commenturl%>"  target="_blank">
+              <div class="post_recommend_tie_wrap">
+                <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                <span class="post_recommend_tie_text">
+                  <i>跟贴</i><%=tienum ? tienum : 0%></span>
+              </div>
+            </a>
+          <%}else{%>
+            <a class="post_recommend_tie right" href="#"  target="_blank">
+              <div class="post_recommend_tie_wrap">
+                <span class="post_recommend_tie_icon icons"><%=tienum ? tienum : 0%></span>
+                <span class="post_recommend_tie_text">
+                  <i>跟贴</i><%=tienum ? tienum : 0%></span>
+              </div>
+            </a>
+          <%}%>
+           <div class="ne-shares-parent right ">
+            <span href="#share" title="分享" class="ne-shares-arr"></span>
+            <div class="share-join-item" ne-state="<%=docurl%>" ne-props="skin:pop4x1"  ne-extend="%share.conf">
+              <div class="ne-shares-pop6x1wrap" ne-role="share-wrap" style="visibility: hidden;">
+                <ul class="ne-shares-pop6x1" data-url="<%=docurl%>"  data-title="<%=title%>" data-pic="<%=imgurl%>"  data-digest="<%=digest%>" data-source="网易房产">
+                  <li  class="nt-share-item" data-type="yixin">
+                    <a href="javascript:">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-yixin"></i>
+                        <span class="ep-share-name">易信</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nt-wx2dcode-icon">
+                    <a href="javascript:" target="_self" class="ne-shares-weixin"  id="weixin-share">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-weixin"></i>
+                        <span class="ep-share-name">微信</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="nt-share-item" data-type="sinawb">
+                    <a href="javascript:">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-sina"></i>
+                        <span class="ep-share-name">微博</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class=" last nt-share-item" data-type="qzone">
+                    <a  href="javascript:">
+                      <span class="inner">
+                        <i class="ep-share-icon ep-share-qzone"></i>
+                        <span class="ep-share-name">QQ空间</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                </div>
+                <div class="ne-shares-qrwrap">
+                  <div class="ne-shares-qrarr"></div>
+                  <div ne-role="qrcode" class="ne-shares-qrcode">
+                    <div class="qrcode" title="<%=docurl%>"><canvas width="110" height="110" style="display: none;"></canvas><img alt="Scan me!" style="display: block;" src="" width="110" height="110"></div>
+                  </div>
+                  <p>用微信扫码二维码</p><p>分享至好友和朋友圈</p>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div> 
+      </div>    
+      
+    <%}%>
+</script><div id="target"></div>
+<div class="ns_sidebar none" style="display: none;">
+<div class="ns_side_tolid"><i class="ft_icons ic_totop"></i></div>
+</div>
+<script type="text/javascript" src="http://img2.cache.netease.com/f2e/libs/jquery.js"></script>
+<script src="http://img1.cache.netease.com/f2e/house/resold/components/qrcode.1125509.min.js"></script>
+<script type="text/javascript" src="http://img2.cache.netease.com/f2e/house/estate_touch/js/baiduTemplate.957080.min.js"></script>	
+<script type="text/javascript" src="http://img3.cache.netease.com/common/share/yixin/b02/yixin.min.js"></script>
+<script type="text/javascript" src="http://img2.cache.netease.com/f2e/house/wb_specials/js/share.1163892.min.js"></script>
+<script type="text/javascript" src="http://img2.cache.netease.com/f2e/house/house_lib/live/house-slider.1.0.1083439.min.js"></script>
+<script type="text/javascript" src="http://img2.cache.netease.com/f2e/house/wb_specials/js/index2016.1236792.min.js"></script>
+<div class="N-nav-bottom">
+    <div class="N-nav-bottom-main">
+    	<div class="ntes_foot_link">
+	<span class="N-nav-bottom-copyright"><span class="N-nav-bottom-copyright-icon">&copy;</span> 1997-2018 网易公司版权所有</span>
+	<a href="http://corp.163.com/">About NetEase</a> |
+	<a href="http://gb.corp.163.com/gb/about/overview.html">公司简介</a> |
+	<a href="http://gb.corp.163.com/gb/contactus.html">联系方法</a> |
+	<a href="http://corp.163.com/gb/job/job.html">招聘信息</a> |
+	<a href="http://help.163.com/ ">客户服务</a> |
+	<a href="http://gb.corp.163.com/gb/legal.html">隐私政策</a> |
+	<a href="http://emarketing.163.com/">广告服务</a> |
+	<a href="http://sitemap.163.com/">网站地图</a> |
+	<a href="http://www.163.com/special/0077450P/feedback_window.html" class="ne_foot_feedback_link">意见反馈</a> |
+	<a href="http://jubao.aq.163.com/">不良信息举报</a>
+</div>
+    </div>
+    	<style>
+	.N-nav-bottom-sub{width: 960px; margin:0 auto; position: relative; height: 0px; z-index: 1000; }
+	.ne_foot_feedback_box{width: 360px; height: 270px; position: absolute; z-index: 9999; bottom: 34px; right: 0; display: none; }
+	.ne_foot_feedback_box .feedback_close{width: 11px; height: 11px; background: url(http://static.ws.126.net/f2e/www/feedback/images/box_close.png) no-repeat; position: absolute; right: 8px; top: 7px; font-size: 0; overflow: hidden; text-indent: -9990em; }
+	.ne_foot_feedback_box .feedback_cor{width: 19px; height: 13px; background: url(http://static.ws.126.net/f2e/www/feedback/images/box_cor.png) no-repeat; position: absolute; left: 236px; top: 250px; }
+	.ne_foot_feedback_box .feedback_box{border:1px solid #cdcdcd; background: #fff; width: 358px; height: 250px; overflow: hidden; }
+	.ne_foot_feedback_box .feedback_box iframe{display: block; border: 0; width: 100%; height: 250px; overflow: hidden; }
+	</style>
+	<div class="N-nav-bottom-sub" id="N-nav-bottom-sub"></div>
+	<script>
+	(function(){
+		if(!window.NTES) return;
+		function showFeedbackBox(x,y){
+			var footmainNd = NTES('.N-nav-bottom-main')[0];
+			var feedbacklinkNd = NTES('.ne_foot_feedback_link')[0];
+			if(!footmainNd){
+				window.open(feedbacklinkNd.href);
+				return;
+			};
+			var x = x;
+			var y = y;
+			if(x){
+				NTES(".ne_foot_feedback_box")[0].style.top = x +"px";
+			}else{
+				x = feedbacklinkNd.offsetLeft - footmainNd.offsetLeft + (feedbacklinkNd.offsetWidth/2) - 246;
+				if(NTES.browser.msie && (parseInt(NTES.browser.version) == 7 ||parseInt(NTES.browser.version) == 6)){
+					x = feedbacklinkNd.offsetLeft + (feedbacklinkNd.offsetWidth/2) - 246;
+				}
+				NTES(".ne_foot_feedback_box")[0].style.left = x +"px";
+			}
+			if(y){
+				NTES(".ne_foot_feedback_box")[0].style.top = y +"px";
+			}
+			NTES(".ne_foot_feedback_box")[0].style.display = "block";
+		}
+		function bindFeedbackBoxClose(){
+			NTES(".ne_foot_feedback_box .feedback_close").addEvent("click",function(){
+				NTES(".ne_foot_feedback_box")[0].style.display = "none";
+				return false;
+			});
+		}
+		NTES(".ne_foot_feedback_link").addEvent("click",function(){
+			if(NTES("#ne_foot_feedback_box")){
+				showFeedbackBox();
+			}else{
+				var boxNd = document.createElement("div");
+				boxNd.className = "ne_foot_feedback_box";
+				boxNd.id = "ne_foot_feedback_box";
+				boxNd.innerHTML = '<a href="javascript:;" target="_self" class="feedback_close">关闭</a> <span class="feedback_cor"></span> <div class="feedback_box"> <iframe src="http://www.163.com/special/0077450P/feedback_window.html" frameborder="0" witdh="100%" height="290" scrolling="no"></iframe> </div>';
+				document.getElementById('N-nav-bottom-sub').appendChild(boxNd);
+				window.setTimeout(function(){
+					showFeedbackBox();
+					bindFeedbackBoxClose();
+				},500);
+			}
+			return false;
+		});
+	})();
+	</script>
+</div>
+<!--  --><!-- STAT WRating v1.0 -->
+<script type="text/javascript" src="http://img1.cache.netease.com/common/script/wrating.js"></script>
+<script type="text/javascript">
+    var vjAcc = "860010-0502010100";
+    var wrUrl = "http://163.wrating.com/";
+    vjTrack();
+</script>
+<noscript>
+    <img src="http://163.wrating.com/a.gif?c=860010-0502010100" width="1" height="1" />
+</noscript>
+<!-- STAT NetEase Devilfish 2006 -->
+<script type="text/javascript" src="http://analytics.163.com/ntes.js"></script>
+<script type="text/javascript">
+    _ntes_nacc = "portal"; //站点ID。
+    neteaseTracker();
+</script>
+<!-- big data statistics -->
+<!-- big data analysis -->
+<script src="http://img1.cache.netease.com/f2e/products/analysis/js/analysis.350ctAoOoFtN.12.js"></script></body>
+</html>
