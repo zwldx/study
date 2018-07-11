@@ -1,7 +1,7 @@
 
 <?php
 header("Content-Type:text/html;charset=gbk");
-include 'utils.php';
+include 'public/utils.php';
 // $url = 'http://bj.news.163.com/';
 $url = 'http://bendi.news.163.com/beijing/special/04388GGG/bjxinxiliu.js?callback=data_callback&_=1530860994846';
 

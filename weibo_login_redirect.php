@@ -1,5 +1,5 @@
 <?php
-include 'utils.php';
+include 'public/utils.php';
 $code = isset($_GET['code'])?$_GET['code']:'error';
 // echo $code;
 

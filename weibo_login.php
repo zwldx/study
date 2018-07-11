@@ -1,5 +1,5 @@
 <?php
-include 'utils.php';
+include 'public/utils.php';
 $client_id = '340575609';
 $redirect_uri ="http://s.cn/weibo_login_redirect.php";
 $data =[

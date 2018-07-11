@@ -16,5 +16,7 @@ meta.content = "3; url=http://s.cn/sso_onclick/user.php";
 
 document.head.appendChild(meta);
 document.body.appendChild(span);
+
+//前面的之所以那样写，因为下面的代码,即document.write异步加载时不能写在页面里
 //document.write('B站登录成功，3秒后跳转到个人中心页面');
 //document.write('<meta http-equiv="refresh" content="3; url=http://s.cn/sso_onclick/user.php" />');
